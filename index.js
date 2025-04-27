@@ -10,7 +10,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // middlewares
 app.use(cors({
-  origin: ['https://your-frontend-url.com', 'https://foodapp-server-myfu.onrender.com'], // replace 'your-frontend-url.com' with your frontend URL
+  origin: ['https://foodapp-server-myfu.onrender.com'], // replace 'your-frontend-url.com' with your frontend URL
   credentials: true,
 }));
 app.use(express.json());
