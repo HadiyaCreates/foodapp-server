@@ -9,7 +9,11 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 // console.log(process.env.ACCESS_TOKEN_SECRET)
 
 // middlewares
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: ['https://foodapp-client-xi.vercel.app'], // Replace with your frontend URL
+  credentials: true,
+}));
 app.use(express.json());
 
 // const connect = require('../mongoc')
