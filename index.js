@@ -9,10 +9,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 // console.log(process.env.ACCESS_TOKEN_SECRET)
 
 // middlewares
-app.use(cors({
-  origin: ['https://foodapp-server-myfu.onrender.com'], // replace 'your-frontend-url.com' with your frontend URL
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 // const connect = require('../mongoc')
