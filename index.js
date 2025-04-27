@@ -10,8 +10,12 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // middlewares
 // app.use(cors());
+// app.use(cors({
+//   origin: ['https://foodapp-client-xi.vercel.app'], // Replace with your frontend URL
+//   credentials: true,
+// }));
 app.use(cors({
-  origin: ['https://foodapp-client-xi.vercel.app'], // Replace with your frontend URL
+  origin: ['https://foodapp-server-myfu.onrender.com'], // Replace with your frontend URL
   credentials: true,
 }));
 app.use(express.json());
